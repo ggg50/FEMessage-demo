@@ -19,7 +19,11 @@ export default {
         {prop: 'type', label: '分类'},
         {prop: 'version', label: '版本'},
         {prop: 'language', label: '开发语言'},
-        {prop: 'lastUpdateTime', label: '最后更新时间'},
+        {
+          prop: 'lastUpdateTime',
+          label: '最后更新时间',
+          formatter: row => this.formatTime(new Date(row.lastUpdateTime))
+        },
         {
           prop: 'status',
           label: '状态',
@@ -165,6 +169,19 @@ export default {
             data: {deletedItems: this.deletedItems}
           }
         )
+      },
+
+      formatTime: date => {
+        let year = date.getFullYear()
+        let month = date.getMonth() + 1
+        let day = date.getDate()
+
+        let formatNumber = n => {
+          n = n.toString()
+          return n[1] ? n : '0' + n
+        }
+
+        return [year, month, day].map(formatNumber).join('-')
       }
     }
   }
