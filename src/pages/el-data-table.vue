@@ -38,21 +38,11 @@ export default {
             placeholder: '请选择'
           },
           options: [
-            {
-              value: '前端组件'
-            },
-            {
-              value: '分布式工具'
-            },
-            {
-              value: '引用服务'
-            },
-            {
-              value: '数据存储'
-            },
-            {
-              value: '测试子组件'
-            }
+            {value: '前端组件'},
+            {value: '分布式工具'},
+            {value: '引用服务'},
+            {value: '数据存储'},
+            {value: '测试子组件'}
           ]
         },
         {
@@ -70,6 +60,61 @@ export default {
         }
       ],
 
+      form: [
+        {
+          type: 'input',
+          id: 'name',
+          label: '组件名称',
+          rules: [
+            {
+              required: true,
+              message: '请输入品牌名称',
+              trigger: 'blur',
+              transform: v => v && v.trim()
+            }
+          ],
+          el: {placeholder: '请输入品牌名称'}
+        },
+        {
+          type: 'input',
+          id: 'version',
+          label: '版本',
+          rules: [
+            {
+              required: true,
+              message: '请输入版本',
+              trigger: 'blur',
+              transform: v => v && v.trim()
+            }
+          ],
+          el: {placeholder: '请输入版本'}
+        },
+        {
+          type: 'select',
+          id: 'type',
+          label: '分类',
+          options: [
+            {value: '前端组件'},
+            {value: '分布式工具'},
+            {value: '引用服务'},
+            {value: '数据存储'},
+            {value: '测试子组件'}
+          ]
+        },
+        {
+          type: 'select',
+          id: 'language',
+          label: '开发语言',
+          options: [
+            {value: 'javascript'},
+            {value: 'java'},
+            {value: 'nodejs'},
+            {value: 'python'},
+            {value: 'c++'}
+          ]
+        }
+      ],
+
       hasDialog: true,
       hasView: true,
       hasEdit: true,
@@ -80,6 +125,7 @@ export default {
       hasDelete: true,
       hasOperation: true,
       hasPagination: true,
+      persistSelection: true,
 
       extraButtons: [
         {
@@ -93,26 +139,10 @@ export default {
 
       beforeSearch: () => {
         this.url =
-          'https://easy-mock.com/mock/5bbefdf6faedce31cd6a5261/example/customFirstPage'
+          'https://easy-mock.com/mock/5b586c9dfce1393a862d034d/example/tree'
         return Promise.resolve()
-      },
+      }
 
-      form: [
-        {
-          type: 'input',
-          id: 'name',
-          label: '品牌名称',
-          rules: [
-            {
-              required: true,
-              message: '请输入品牌名称',
-              trigger: 'blur',
-              transform: v => v && v.trim()
-            }
-          ],
-          el: {placeholder: '请输入品牌名称'}
-        }
-      ]
       // onDelete(selected){
       //   console.log(1)
       //   selected.shift()
