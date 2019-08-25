@@ -5,8 +5,12 @@
 export default {
   data() {
     return {
-      url: 'http://127.0.0.1:5000/mock/14/fem-test',
-      // url: "https://easy-mock.com/mock/5b586c9dfce1393a862d034d/example/img?a=slotheader",
+      //因为后台没有实际的数据库，这里用这些属性辅助模拟有数据库的样子~
+      deletedItems: [],
+      addedItems: [],
+      editedItems: [],
+
+      url: 'http://127.0.0.1:5000/mock/14/fem-get-test',
 
       columns: [
         {type: 'selection'},
@@ -137,17 +141,32 @@ export default {
         }
       ],
 
-      beforeSearch: () => {
-        this.url =
-          'https://easy-mock.com/mock/5b586c9dfce1393a862d034d/example/tree'
-        return Promise.resolve()
-      }
+      // beforeSearch: () => {
+      //   this.url =
+      //     'https://easy-mock.com/mock/5b586c9dfce1393a862d034d/example/tree'
+      //   return Promise.resolve()
+      // },
 
-      // onDelete(selected){
-      //   console.log(1)
-      //   selected.shift()
-      //   return new Promise(()=>{})
-      // }
+      onNew: () => {},
+      onEdit: () => {},
+      onDelete: selected => {
+        if (selected.id) {
+          this.deletedItems.push(selected.id)
+        } else {
+          for (let i = 0; i < selected.length; i++) {
+            this.deletedItems.push(selected[i].id)
+          }
+        }
+        this.url = `http://127.0.0.1:5000/mock/14/fem-get-test?deletedItems=${JSON.stringify(
+          this.deletedItems
+        )}`
+        return this.$axios.delete(
+          'http://127.0.0.1:5000/mock/14/fem-delete-test',
+          {
+            data: {deletedItems: this.deletedItems}
+          }
+        )
+      }
     }
   }
 }
