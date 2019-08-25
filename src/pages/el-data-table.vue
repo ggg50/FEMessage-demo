@@ -5,12 +5,13 @@
 export default {
   data() {
     return {
+      url: 'http://127.0.0.1:5000/mock/14/fem-get-test',
+
       //因为后台没有实际的数据库，这里用这些属性辅助模拟有数据库的样子~
       deletedItems: [],
       addedItems: [],
       editedItems: [],
-
-      url: 'http://127.0.0.1:5000/mock/14/fem-get-test',
+      filtedUrl: this.url,
 
       columns: [
         {type: 'selection'},
@@ -22,7 +23,7 @@ export default {
         {
           prop: 'status',
           label: '状态',
-          formatter: row => (row.status === 'normal' ? '上架' : '下架')
+          formatter: row => (row.status === '上架' ? '上架' : '下架')
         }
       ],
 
@@ -32,7 +33,7 @@ export default {
           id: 'name',
           label: '组件名称',
           collapsible: false,
-          el: {placeholder: '请输入用户名'}
+          el: {placeholder: '请输入组件名称'}
         },
         {
           type: 'select',
@@ -72,12 +73,12 @@ export default {
           rules: [
             {
               required: true,
-              message: '请输入品牌名称',
+              message: '请输入组件名称',
               trigger: 'blur',
               transform: v => v && v.trim()
             }
           ],
-          el: {placeholder: '请输入品牌名称'}
+          el: {placeholder: '请输入组件名称'}
         },
         {
           type: 'input',
@@ -134,7 +135,7 @@ export default {
       extraButtons: [
         {
           type: 'success',
-          text: row => (row.status !== 'normal' ? '上架' : '下架'),
+          text: row => (row.status !== '上架' ? '上架' : '下架'),
           atClick(row) {
             row.status = !row.status
           }
@@ -142,8 +143,6 @@ export default {
       ],
 
       // beforeSearch: () => {
-      //   this.url =
-      //     'https://easy-mock.com/mock/5b586c9dfce1393a862d034d/example/tree'
       //   return Promise.resolve()
       // },
 
