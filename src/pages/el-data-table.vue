@@ -5,8 +5,8 @@
 export default {
   data() {
     return {
-      url:
-        'https://easy-mock.com/mock/5b586c9dfce1393a862d034d/example/img?a=slotheader',
+      url: 'http://127.0.0.1:5000/mock/14/fem-test',
+      // url: "https://easy-mock.com/mock/5b586c9dfce1393a862d034d/example/img?a=slotheader",
 
       columns: [
         {type: 'selection'},
