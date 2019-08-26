@@ -1,5 +1,13 @@
 <template>
-  <el-data-table v-bind="$data" ref="table" />
+  <el-data-table v-bind="$data" ref="table">
+    <template>
+      <el-table-column label="操作" type="text" size="small" min-width="150px">
+        <text-button class="view">查看</text-button>
+        <text-button class="edit">编辑</text-button>
+        <text-button class="changeStatus">上架</text-button>
+      </el-table-column>
+    </template>
+  </el-data-table>
 </template>
 <script>
 export default {
@@ -11,7 +19,6 @@ export default {
       deletedItems: [],
       addedItems: [],
       editedItems: [],
-      filtedUrl: this.url,
 
       columns: [
         {type: 'selection'},
@@ -27,7 +34,10 @@ export default {
         {
           prop: 'status',
           label: '状态',
-          formatter: row => (row.status === '上架' ? '上架' : '下架')
+          className: 'status',
+          formatter: row => {
+            return row.status === '上架' ? '上架' : '下架'
+          }
         }
       ],
 
@@ -109,6 +119,7 @@ export default {
             {value: '数据存储'},
             {value: '测试子组件'}
           ]
+          // inline: true
         },
         {
           type: 'select',
@@ -121,30 +132,39 @@ export default {
             {value: 'python'},
             {value: 'c++'}
           ]
+          // inline: true
         }
       ],
 
       hasDialog: true,
-      hasView: true,
-      hasEdit: true,
+
+      hasView: false,
+      hasEdit: false,
+      isTree: false,
+      hasNew: false,
+      hasOperation: false,
+
       canDelete: () => {
         return true
       },
       editText: '编辑',
       hasDelete: true,
-      hasOperation: true,
+
       hasPagination: true,
       persistSelection: true,
 
-      extraButtons: [
-        {
-          type: 'success',
-          text: row => (row.status !== '上架' ? '上架' : '下架'),
-          atClick(row) {
-            row.status = !row.status
-          }
-        }
-      ],
+      // extraButtons: [
+      //   {
+      //     // type: 'text',
+      //     // index: 0,
+      //     fixed: "left",
+      //     style: "border: 1px soid black;border-color: #e1e4e9; color: #2D303B;padding-left: 0.5em; padding-right: 0.5em; font-size: 12px; display:inline-block",
+      //     text: row => (row.status !== '上架' ? '上架' : '下架'),
+      //     atClick(row) {
+      //       row.status = !row.status
+      //     }
+      //   }
+      // ],
 
       // beforeSearch: () => {
       //   return Promise.resolve()
@@ -169,21 +189,36 @@ export default {
             data: {deletedItems: this.deletedItems}
           }
         )
-      },
-
-      formatTime: date => {
-        let year = date.getFullYear()
-        let month = date.getMonth() + 1
-        let day = date.getDate()
-
-        let formatNumber = n => {
-          n = n.toString()
-          return n[1] ? n : '0' + n
-        }
-
-        return [year, month, day].map(formatNumber).join('-')
       }
     }
+  },
+
+  methods: {
+    formatTime: date => {
+      let year = date.getFullYear()
+      let month = date.getMonth() + 1
+      let day = date.getDate()
+
+      let formatNumber = n => {
+        n = n.toString()
+        return n[1] ? n : '0' + n
+      }
+
+      return [year, month, day].map(formatNumber).join('-')
+    },
+
+    extraClass() {
+      let statusCell = document.querySelector(`.status`)
+      console.log(statusCell)
+    }
+  },
+
+  mounted() {
+    console.log(this.$refs.table)
+    // console.log(111)
+    this.extraClass()
   }
 }
 </script>
+
+<style></style>
