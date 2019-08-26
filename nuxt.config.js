@@ -17,17 +17,25 @@ const config = {
   aliIconFont: '',
   env: {
     mock: {
-      '/deepexi-tenant': mockServer,
-      '/deepexi-permission': mockServer
+      '/myapi': 'http://127.0.0.1:5000/mock/14'
     },
-    dev: apiServer
-      ? {
-          '/deepexi-tenant': apiServer,
-          '/deepexi-permission': apiServer
-        }
-      : {}
+    dev: {
+      '/myapi': 'http://127.0.0.1:5000/mock/14'
+    }
   }
 }
+
+// mock: {
+//   '/api': "http://127.0.0.1:5000/mock/14",
+//   '/deepexi-tenant': mockServer,
+//   '/deepexi-permission': mockServer
+// },
+// dev: apiServer
+//   ? {
+//       '/deepexi-tenant': apiServer,
+//       '/deepexi-permission': apiServer
+//     }
+//   : {}
 
 let axios = {
   proxy: true

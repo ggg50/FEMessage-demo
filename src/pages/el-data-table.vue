@@ -11,6 +11,10 @@
 </template>
 <script>
 export default {
+  // mounted(){
+  //   this.$axios.baseURL = ""
+  //   this.$axios.$get('http://127.0.0.1:5000/mock/14/fem-get-test')
+  // },
   data() {
     return {
       url: 'http://127.0.0.1:5000/mock/14/fem-get-test',
@@ -19,6 +23,14 @@ export default {
       deletedItems: [],
       addedItems: [],
       editedItems: [],
+
+      hasDialog: true,
+      hasView: false,
+      hasEdit: false,
+      isTree: false,
+      hasNew: false,
+      saveQuery: false,
+      hasOperation: false,
 
       columns: [
         {type: 'selection'},
@@ -136,14 +148,6 @@ export default {
         }
       ],
 
-      hasDialog: true,
-
-      hasView: false,
-      hasEdit: false,
-      isTree: false,
-      hasNew: false,
-      hasOperation: false,
-
       canDelete: () => {
         return true
       },
@@ -153,6 +157,7 @@ export default {
       hasPagination: true,
       persistSelection: true,
 
+      // 这部分不需要，不过先预留着
       // extraButtons: [
       //   {
       //     // type: 'text',
@@ -183,7 +188,7 @@ export default {
         this.url = `http://127.0.0.1:5000/mock/14/fem-get-test?deletedItems=${JSON.stringify(
           this.deletedItems
         )}`
-        return this.$axios.delete(
+        return this.$axios.$delete(
           'http://127.0.0.1:5000/mock/14/fem-delete-test',
           {
             data: {deletedItems: this.deletedItems}
