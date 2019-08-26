@@ -25,10 +25,11 @@ export default {
       editedItems: [],
 
       hasDialog: true,
+      hasNew: true,
+
       hasView: false,
       hasEdit: false,
       isTree: false,
-      hasNew: false,
       saveQuery: false,
       hasOperation: false,
 
@@ -47,9 +48,7 @@ export default {
           prop: 'status',
           label: '状态',
           className: 'status',
-          formatter: row => {
-            return row.status === '上架' ? '上架' : '下架'
-          }
+          formatter: row => row.status
         }
       ],
 
