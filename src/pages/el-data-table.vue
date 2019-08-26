@@ -221,4 +221,46 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.status:not(.is-leaf) {
+  color: #8dc7a3;
+}
+
+/* .el-table__fixed-right {
+  background-color: red;
+} */
+
+.el-button--success {
+  border: 1px solid red;
+}
+
+.el-table_1_column_8 {
+  width: 0;
+}
+
+.view {
+  font-size: 12px;
+  color: white;
+  border-radius: 3px;
+  background-color: #5da0f5;
+  line-height: 2em;
+  padding: 0.3em 1em;
+  border: 1px solid #dfe1e7;
+}
+
+.edit {
+  font-size: 12px;
+  border-radius: 3px;
+  line-height: 2em;
+  padding: 0.3em 1em;
+  border: 1px solid #dfe1e7;
+}
+
+.changeStatus {
+  font-size: 12px;
+  border-radius: 3px;
+  line-height: 2em;
+  padding: 0.3em 1em;
+  border: 1px solid #dfe1e7;
+}
+</style>
