@@ -102,7 +102,7 @@
               f.p +
               '' +
               {
-                2: '2e7e6db60acf57f14315',
+                2: 'b015cab47b9e3bd36fac',
                 3: 'ad1564ac97070fda0e12',
                 4: '29794b5489de4af4bc95',
                 5: 'bd8acccb1ccdc3d92191'
@@ -179,7 +179,7 @@
     (f.o = function(object, e) {
       return Object.prototype.hasOwnProperty.call(object, e)
     }),
-    (f.p = '/_nuxt/'),
+    (f.p = '/dist/'),
     (f.oe = function(e) {
       throw (console.error(e), e)
     })

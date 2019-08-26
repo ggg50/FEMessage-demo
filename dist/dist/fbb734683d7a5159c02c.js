@@ -267,7 +267,11 @@
                           payload: n.payload,
                           error: n.error,
                           base: '/',
-                          env: {COOKIE_PATH: '/'}
+                          env: {
+                            COOKIE_PATH: '/',
+                            PUBLIC_PATH: '/dist/',
+                            API_SERVER: ''
+                          }
                         }),
                         n.req && (e.context.req = n.req),
                         n.res && (e.context.res = n.res),
