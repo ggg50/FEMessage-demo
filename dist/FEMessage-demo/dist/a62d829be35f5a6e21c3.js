@@ -269,7 +269,7 @@
                           base: '/',
                           env: {
                             COOKIE_PATH: '/',
-                            PUBLIC_PATH: '/FEMessage-demo/'
+                            PUBLIC_PATH: '/FEMessage-demo/dist/'
                           }
                         }),
                         n.req && (e.context.req = n.req),

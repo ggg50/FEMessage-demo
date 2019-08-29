@@ -179,7 +179,7 @@
     (f.o = function(object, e) {
       return Object.prototype.hasOwnProperty.call(object, e)
     }),
-    (f.p = '/FEMessage-demo/'),
+    (f.p = '/FEMessage-demo/dist/'),
     (f.oe = function(e) {
       throw (console.error(e), e)
     })
