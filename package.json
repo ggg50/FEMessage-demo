@@ -23,6 +23,7 @@
     "mock:nologin": "cross-env MODE=mock NO_LOGIN=1 nuxt",
     "dev:nologin": "cross-env MODE=dev NO_LOGIN=1 nuxt",
     "build": "cross-env MODE=prod nuxt build",
+    "build:nologin": "cross-env MODE=prod NO_LOGIN=1 nuxt build",
     "test": "jest",
     "start": "cross-env HOST=0.0.0.0 PORT=3333 MODE=prod nuxt start",
     "stdver": "standard-version -m '[skip ci] chore(release): v%s'",

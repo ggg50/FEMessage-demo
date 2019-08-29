@@ -46,10 +46,10 @@
           return T
         }),
         n.d(e, 'g', function() {
-          return D
+          return N
         }),
         n.d(e, 'l', function() {
-          return N
+          return D
         })
       n(59), n(27)
       var r = n(70),
@@ -268,6 +268,7 @@
                           error: n.error,
                           base: '/',
                           env: {
+                            NO_LOGIN: '1',
                             COOKIE_PATH: '/',
                             PUBLIC_PATH: '/FEMessage-demo/dist/'
                           }
@@ -481,13 +482,13 @@
           })(t, e)
         )
       }
-      function D(t, e) {
+      function N(t, e) {
         var n = {},
           r = h({}, t, {}, e)
         for (var o in r) String(t[o]) !== String(e[o]) && (n[o] = !0)
         return n
       }
-      function N(t) {
+      function D(t) {
         var e
         if (t.message || 'string' == typeof t) e = t.message || t
         else
@@ -934,7 +935,7 @@
                   P,
                   S,
                   T,
-                  D = this
+                  N = this
                 return regeneratorRuntime.wrap(
                   function(t) {
                     for (;;)
@@ -961,11 +962,11 @@
                             (c = !1),
                             (l = function(path) {
                               n.path === path.path &&
-                                D.$loading.finish &&
-                                D.$loading.finish(),
+                                N.$loading.finish &&
+                                N.$loading.finish(),
                                 n.path !== path.path &&
-                                  D.$loading.pause &&
-                                  D.$loading.pause(),
+                                  N.$loading.pause &&
+                                  N.$loading.pause(),
                                 c || ((c = !0), r(path))
                             }),
                             (t.next = 7),
@@ -1160,22 +1161,22 @@
                                     e.params
                                   )),
                                   (t._dataRefresh = !1),
-                                  (D._pathChanged && D._queryChanged) ||
+                                  (N._pathChanged && N._queryChanged) ||
                                     t._path !== x[i])
                                 )
                                   t._dataRefresh = !0
-                                else if (!D._pathChanged && D._queryChanged) {
+                                else if (!N._pathChanged && N._queryChanged) {
                                   var n = t.options.watchQuery
                                   !0 === n
                                     ? (t._dataRefresh = !0)
                                     : Array.isArray(n) &&
                                       (t._dataRefresh = n.some(function(t) {
-                                        return D._diffQuery[t]
+                                        return N._diffQuery[t]
                                       }))
                                 }
                                 if (
-                                  !D._hadError &&
-                                  D._isMounted &&
+                                  !N._hadError &&
+                                  N._isMounted &&
                                   !t._dataRefresh
                                 )
                                   return Promise.resolve()
@@ -1191,13 +1192,13 @@
                                     m.context
                                   ).then(function(e) {
                                     Object(f.a)(t, e),
-                                      D.$loading.increase &&
-                                        D.$loading.increase(l)
+                                      N.$loading.increase &&
+                                        N.$loading.increase(l)
                                   })
                                   r.push(d)
                                 }
                                 if (
-                                  ((D.$loading.manual =
+                                  ((N.$loading.manual =
                                     !1 === t.options.loading),
                                   c)
                                 ) {
@@ -1207,8 +1208,8 @@
                                       'function' == typeof p.then)) ||
                                     (p = Promise.resolve(p)),
                                     p.then(function(t) {
-                                      D.$loading.increase &&
-                                        D.$loading.increase(l)
+                                      N.$loading.increase &&
+                                        N.$loading.increase(l)
                                     }),
                                     r.push(p)
                                 }
@@ -1309,7 +1310,7 @@
               })
             }
           }
-          function D(t) {
+          function N(t) {
             window.onNuxtReadyCbs.forEach(function(e) {
               'function' == typeof e && e(t)
             }),
@@ -1321,8 +1322,8 @@
                 })
               })
           }
-          function N() {
-            return (N = Object(r.a)(
+          function D() {
+            return (D = Object(r.a)(
               regeneratorRuntime.mark(function t(e) {
                 var n, r, c, l
                 return regeneratorRuntime.wrap(function(t) {
@@ -1345,7 +1346,7 @@
                               v.afterEach(P),
                               v.afterEach(T.bind(r)),
                               o.default.nextTick(function() {
-                                D(r)
+                                N(r)
                               })
                           }),
                           (r.setTransitions = r.$options.nuxt.setTransitions.bind(
@@ -1394,7 +1395,7 @@
           }
           Object(d.b)()
             .then(function(t) {
-              return N.apply(this, arguments)
+              return D.apply(this, arguments)
             })
             .catch(w)
         }.call(this, n(13))
@@ -1413,8 +1414,7 @@
                 for (;;)
                   switch ((t.prev = t.next)) {
                     case 0:
-                      t.next = 2
-                      break
+                      return t.abrupt('return')
                     case 2:
                       ;(n = e.store),
                         e.route,
@@ -2068,7 +2068,7 @@
               : t('NuxtChild', {key: this.routerViewKey, props: this.$props})
           }
         },
-        D = {
+        N = {
           name: 'NuxtLoading',
           data: function() {
             return {
@@ -2203,9 +2203,9 @@
             )
           }
         },
-        N =
+        D =
           (n(263),
-          Object(R.a)(D, void 0, void 0, !1, null, null, null).exports),
+          Object(R.a)(N, void 0, void 0, !1, null, null, null).exports),
         A = (n(264), n(265), n(2), n(96)),
         L = n.n(A),
         I = {name: 'CopyRight'},
@@ -2763,7 +2763,7 @@
               )
             }
           },
-          components: {NuxtLoading: N}
+          components: {NuxtLoading: D}
         }
       n(116), n(119)
       c.default.use(M.a)
@@ -3013,8 +3013,8 @@
         Pt = n.n(Rt),
         St = (n(311), n(197)),
         Tt = n.n(St),
-        Dt = (n(312), n(198)),
-        Nt = n.n(Dt),
+        Nt = (n(312), n(198)),
+        Dt = n.n(Nt),
         At = (n(313), n(199)),
         Lt = n.n(At),
         It = (n(315), n(200)),
@@ -3106,7 +3106,7 @@
         c.default.use(Mt.a),
         c.default.use(qt.a),
         c.default.use(Lt.a),
-        c.default.use(Nt.a),
+        c.default.use(Dt.a),
         c.default.use(Tt.a),
         c.default.use(Pt.a),
         c.default.use(Et.a),
