@@ -238,9 +238,9 @@ export default {
   border: 1px solid red;
 }
 
-.el-table_1_column_8 {
+/* .el-table_1_column_8 {
   width: 0;
-}
+} */
 
 .view {
   font-size: 12px;
