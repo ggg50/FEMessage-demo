@@ -15,7 +15,7 @@
           data: function() {
             var e = this
             return {
-              url: 'http://127.0.0.1:5000/mock/14/fem-get-test',
+              url: 'http://kalagala.xyz:3000/mock/12/fem-get',
               deletedItems: [],
               addedItems: [],
               editedItems: [],
@@ -149,11 +149,11 @@
                   for (var i = 0; i < t.length; i++)
                     e.deletedItems.push(t[i].id)
                 return (
-                  (e.url = 'http://127.0.0.1:5000/mock/14/fem-get-test?deletedItems='.concat(
+                  (e.url = 'http://kalagala.xyz:3000/mock/12/fem-get?deletedItems='.concat(
                     JSON.stringify(e.deletedItems)
                   )),
                   e.$axios.$delete(
-                    'http://127.0.0.1:5000/mock/14/fem-delete-test',
+                    'http://kalagala.xyz:3000/mock/12/fem-delete',
                     {data: {deletedItems: e.deletedItems}}
                   )
                 )
