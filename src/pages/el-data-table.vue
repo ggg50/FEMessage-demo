@@ -17,7 +17,7 @@ export default {
   // },
   data() {
     return {
-      url: 'http://kalagala.xyz:3000/mock/12/fem-get',
+      url: 'https://kalagala.xyz/mock/12/fem-get',
 
       //因为后台没有实际的数据库，这里用这些属性辅助模拟有数据库的样子~
       deletedItems: [],
@@ -184,15 +184,12 @@ export default {
             this.deletedItems.push(selected[i].id)
           }
         }
-        this.url = `http://kalagala.xyz:3000/mock/12/fem-get?deletedItems=${JSON.stringify(
+        this.url = `https://kalagala.xyz/mock/12/fem-get?deletedItems=${JSON.stringify(
           this.deletedItems
         )}`
-        return this.$axios.$delete(
-          'http://kalagala.xyz:3000/mock/12/fem-delete',
-          {
-            data: {deletedItems: this.deletedItems}
-          }
-        )
+        return this.$axios.$delete('https://kalagala.xyz/mock/12/fem-delete', {
+          data: {deletedItems: this.deletedItems}
+        })
       }
     }
   },

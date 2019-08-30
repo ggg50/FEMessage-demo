@@ -15,7 +15,7 @@
           data: function() {
             var e = this
             return {
-              url: 'http://kalagala.xyz:3000/mock/12/fem-get',
+              url: 'https://kalagala.xyz/mock/12/fem-get',
               deletedItems: [],
               addedItems: [],
               editedItems: [],
@@ -149,13 +149,12 @@
                   for (var i = 0; i < t.length; i++)
                     e.deletedItems.push(t[i].id)
                 return (
-                  (e.url = 'http://kalagala.xyz:3000/mock/12/fem-get?deletedItems='.concat(
+                  (e.url = 'https://kalagala.xyz/mock/12/fem-get?deletedItems='.concat(
                     JSON.stringify(e.deletedItems)
                   )),
-                  e.$axios.$delete(
-                    'http://kalagala.xyz:3000/mock/12/fem-delete',
-                    {data: {deletedItems: e.deletedItems}}
-                  )
+                  e.$axios.$delete('https://kalagala.xyz/mock/12/fem-delete', {
+                    data: {deletedItems: e.deletedItems}
+                  })
                 )
               }
             }
