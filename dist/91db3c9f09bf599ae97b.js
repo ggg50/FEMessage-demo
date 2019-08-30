@@ -64,7 +64,7 @@
                   options: [
                     {value: '前端组件'},
                     {value: '分布式工具'},
-                    {value: '引用服务'},
+                    {value: '应用服务'},
                     {value: '数据存储'},
                     {value: '测试子组件'}
                   ]
@@ -116,7 +116,7 @@
                   options: [
                     {value: '前端组件'},
                     {value: '分布式工具'},
-                    {value: '引用服务'},
+                    {value: '应用服务'},
                     {value: '数据存储'},
                     {value: '测试子组件'}
                   ]
