@@ -55,7 +55,7 @@
       var r = n(70),
         o = (n(119), n(252), n(253), n(48)),
         c = (n(214), n(215), n(256), n(258), n(73), n(40), n(4)),
-        l = (n(148), n(28), n(17), n(41), n(58), n(21)),
+        l = (n(148), n(28), n(17), n(41), n(50), n(21)),
         f = n(0)
       function d(object, t) {
         var e = Object.keys(object)
@@ -699,7 +699,7 @@
               n(28),
               n(17),
               n(41),
-              n(58),
+              n(50),
               n(162),
               n(231),
               n(243),
@@ -1403,7 +1403,7 @@
     246: function(t, e, n) {
       'use strict'
       n.r(e)
-      n(58), n(119), n(40)
+      n(50), n(119), n(40)
       var r = n(4)
       function o() {
         return (o = Object(r.a)(
@@ -1748,22 +1748,25 @@
       n(59), n(27), n(28), n(41), n(17)
       var r = n(21),
         o = (n(40), n(4)),
-        c = (n(58), n(0)),
+        c = (n(50), n(0)),
         l = n(188),
         f = n.n(l),
         d = n(140),
         h = n(1),
         m = function() {
-          return Object(h.j)(n.e(2).then(n.bind(null, 392)))
+          return Object(h.j)(n.e(2).then(n.bind(null, 389)))
         },
         v = function() {
-          return Object(h.j)(n.e(4).then(n.bind(null, 391)))
+          return Object(h.j)(n.e(4).then(n.bind(null, 390)))
         },
         x = function() {
-          return Object(h.j)(n.e(5).then(n.bind(null, 390)))
+          return Object(h.j)(n.e(5).then(n.bind(null, 391)))
         },
         y = function() {
-          return Object(h.j)(n.e(3).then(n.bind(null, 389)))
+          return Object(h.j)(n.e(6).then(n.bind(null, 393)))
+        },
+        w = function() {
+          return Object(h.j)(n.e(3).then(n.bind(null, 392)))
         }
       c.default.use(d.a),
         'scrollRestoration' in window.history &&
@@ -1774,7 +1777,7 @@
           window.addEventListener('load', function() {
             window.history.scrollRestoration = 'manual'
           }))
-      var w = function(t, e, n) {
+      var _ = function(t, e, n) {
         var r = !1
         return (
           t.matched.length < 2 &&
@@ -1806,8 +1809,8 @@
           })
         )
       }
-      var _ = n(189)
-      function O(object, t) {
+      var O = n(189)
+      function C(object, t) {
         var e = Object.keys(object)
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(object)
@@ -1819,11 +1822,11 @@
         }
         return e
       }
-      var C = (function(t) {
+      var j = (function(t) {
           for (var i = 1; i < arguments.length; i++) {
             var source = null != arguments[i] ? arguments[i] : {}
             i % 2
-              ? O(source, !0).forEach(function(e) {
+              ? C(source, !0).forEach(function(e) {
                   Object(r.a)(t, e, source[e])
                 })
               : Object.getOwnPropertyDescriptors
@@ -1831,7 +1834,7 @@
                   t,
                   Object.getOwnPropertyDescriptors(source)
                 )
-              : O(source).forEach(function(e) {
+              : C(source).forEach(function(e) {
                   Object.defineProperty(
                     t,
                     e,
@@ -1840,8 +1843,8 @@
                 })
           }
           return t
-        })({}, n.n(_).a, {name: 'NoSsr'}),
-        j = {
+        })({}, n.n(O).a, {name: 'NoSsr'}),
+        $ = {
           name: 'NuxtChild',
           functional: !0,
           props: {
@@ -1866,11 +1869,11 @@
             data.nuxtChildDepth = f
             var d = c[f] || l,
               h = {}
-            $.forEach(function(t) {
+            k.forEach(function(t) {
               void 0 !== d[t] && (h[t] = d[t])
             })
             var m = {}
-            k.forEach(function(t) {
+            E.forEach(function(t) {
               'function' == typeof d[t] && (m[t] = d[t].bind(o))
             })
             var v = m.beforeEnter
@@ -1891,7 +1894,7 @@
             )
           }
         },
-        $ = [
+        k = [
           'name',
           'mode',
           'appear',
@@ -1909,7 +1912,7 @@
           'leaveToClass',
           'appearToClass'
         ],
-        k = [
+        E = [
           'beforeEnter',
           'enter',
           'afterEnter',
@@ -1923,7 +1926,7 @@
           'afterAppear',
           'appearCancelled'
         ],
-        E = {
+        R = {
           name: 'NuxtError',
           props: {error: {type: Object, default: null}},
           head: function() {
@@ -1947,9 +1950,9 @@
             }
           }
         },
-        R = (n(262), n(9)),
-        P = Object(R.a)(
-          E,
+        P = (n(262), n(9)),
+        S = Object(P.a)(
+          R,
           function() {
             var t = this,
               e = t.$createElement,
@@ -2022,10 +2025,10 @@
           null,
           null
         ).exports,
-        S = (n(73), n(70)),
-        T = {
+        T = (n(73), n(70)),
+        N = {
           name: 'Nuxt',
-          components: {NuxtChild: j, NuxtError: P},
+          components: {NuxtChild: $, NuxtError: S},
           props: {
             nuxtChildKey: {type: String, default: void 0},
             keepAlive: Boolean,
@@ -2042,7 +2045,7 @@
                   this.nuxtChildKey ||
                   Object(h.b)(this.$route.matched[0].path)(this.$route.params)
                 )
-              var t = Object(S.a)(this.$route.matched, 1)[0]
+              var t = Object(T.a)(this.$route.matched, 1)[0]
               if (!t) return this.$route.path
               var e = t.components.default
               if (e && e.options) {
@@ -2068,7 +2071,7 @@
               : t('NuxtChild', {key: this.routerViewKey, props: this.$props})
           }
         },
-        N = {
+        D = {
           name: 'NuxtLoading',
           data: function() {
             return {
@@ -2203,16 +2206,16 @@
             )
           }
         },
-        D =
+        A =
           (n(263),
-          Object(R.a)(N, void 0, void 0, !1, null, null, null).exports),
-        A = (n(264), n(265), n(2), n(96)),
-        L = n.n(A),
-        I = {name: 'CopyRight'},
-        B =
+          Object(P.a)(D, void 0, void 0, !1, null, null, null).exports),
+        L = (n(264), n(265), n(2), n(96)),
+        I = n.n(L),
+        B = {name: 'CopyRight'},
+        M =
           (n(267),
-          Object(R.a)(
-            I,
+          Object(P.a)(
+            B,
             function() {
               var t = this.$createElement
               return (this._self._c || t)('div', {staticClass: 'copyright'}, [
@@ -2233,8 +2236,8 @@
             '04975640',
             null
           ).exports),
-        M = n(68),
-        U = {
+        U = n(68),
+        z = {
           name: 'MenuItem',
           props: {menuList: {type: Array}},
           methods: {
@@ -2248,10 +2251,10 @@
             }
           }
         },
-        z =
+        F =
           (n(268),
-          Object(R.a)(
-            U,
+          Object(P.a)(
+            z,
             function() {
               var t = this,
                 e = t.$createElement,
@@ -2328,18 +2331,18 @@
             null,
             null
           ).exports),
-        F = {el: 'el-icon-', fa: 'fa fa-', iconfont: 'iconfont icon-'},
-        H = {
+        H = {el: 'el-icon-', fa: 'fa fa-', iconfont: 'iconfont icon-'},
+        J = {
           name: 'IconFont',
           props: {icon: {type: String}, prefix: {type: String, default: 'el'}},
           computed: {
             iconClass: function() {
-              return ''.concat(F[this.prefix]).concat(this.icon)
+              return ''.concat(H[this.prefix]).concat(this.icon)
             }
           }
         },
-        J = Object(R.a)(
-          H,
+        K = Object(P.a)(
+          J,
           function() {
             var t = this.$createElement
             return (this._self._c || t)('i', {class: this.iconClass})
@@ -2350,7 +2353,7 @@
           null,
           null
         ).exports
-      function K(object, t) {
+      function Q(object, t) {
         var e = Object.keys(object)
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(object)
@@ -2362,8 +2365,8 @@
         }
         return e
       }
-      var Q = {
-          components: {Copyright: B, MenuItem: z, ElScrollbar: L.a},
+      var X = {
+          components: {Copyright: M, MenuItem: F, ElScrollbar: I.a},
           data: function() {
             return {
               collapse: !1,
@@ -2374,7 +2377,7 @@
             for (var i = 1; i < arguments.length; i++) {
               var source = null != arguments[i] ? arguments[i] : {}
               i % 2
-                ? K(source, !0).forEach(function(e) {
+                ? Q(source, !0).forEach(function(e) {
                     Object(r.a)(t, e, source[e])
                   })
                 : Object.getOwnPropertyDescriptors
@@ -2382,7 +2385,7 @@
                     t,
                     Object.getOwnPropertyDescriptors(source)
                   )
-                : K(source).forEach(function(e) {
+                : Q(source).forEach(function(e) {
                     Object.defineProperty(
                       t,
                       e,
@@ -2391,7 +2394,7 @@
                   })
             }
             return t
-          })({}, Object(M.b)(['menuList']), {
+          })({}, Object(U.b)(['menuList']), {
             userImg: function() {
               return (
                 this.$store.state.user.avatar ||
@@ -2405,10 +2408,10 @@
             }
           }
         },
-        X =
+        V =
           (n(269),
-          Object(R.a)(
-            Q,
+          Object(P.a)(
+            X,
             function() {
               var t = this,
                 e = t.$createElement,
@@ -2600,20 +2603,20 @@
             null,
             null
           ).exports),
-        V = {
+        W = {
           name: 'login',
-          components: {Copyright: B},
+          components: {Copyright: M},
           data: function() {
             return {}
           },
           methods: {}
         },
-        W =
+        G =
           (n(270),
           {
-            _default: X,
-            _login: Object(R.a)(
-              V,
+            _default: V,
+            _login: Object(P.a)(
+              W,
               function() {
                 var t = this,
                   e = t.$createElement,
@@ -2667,7 +2670,7 @@
               null
             ).exports
           }),
-        G = {
+        Y = {
           head: {
             title: '',
             meta: [
@@ -2750,25 +2753,25 @@
             },
             setLayout: function(t) {
               return (
-                (t && W['_' + t]) || (t = 'default'),
+                (t && G['_' + t]) || (t = 'default'),
                 (this.layoutName = t),
-                (this.layout = W['_' + t]),
+                (this.layout = G['_' + t]),
                 this.layout
               )
             },
             loadLayout: function(t) {
               return (
-                (t && W['_' + t]) || (t = 'default'),
-                Promise.resolve(W['_' + t])
+                (t && G['_' + t]) || (t = 'default'),
+                Promise.resolve(G['_' + t])
               )
             }
           },
-          components: {NuxtLoading: D}
+          components: {NuxtLoading: A}
         }
       n(116), n(119)
-      c.default.use(M.a)
-      var Y = {}
-      ;(Y = (function(t, e) {
+      c.default.use(U.a)
+      var Z = {}
+      ;(Z = (function(t, e) {
         if ((t = t.default || t).commit)
           throw new Error(
             '[nuxt] '.concat(
@@ -2776,15 +2779,15 @@
               ' should export a method that returns a Vuex instance.'
             )
           )
-        return 'function' != typeof t && (t = Object.assign({}, t)), tt(t, e)
-      })(n(271), 'store/index.js')).modules = Y.modules || {}
-      var Z =
-        Y instanceof Function
-          ? Y
+        return 'function' != typeof t && (t = Object.assign({}, t)), et(t, e)
+      })(n(271), 'store/index.js')).modules = Z.modules || {}
+      var tt =
+        Z instanceof Function
+          ? Z
           : function() {
-              return new M.a.Store(Object.assign({strict: !1}, Y))
+              return new U.a.Store(Object.assign({strict: !1}, Z))
             }
-      function tt(t, e) {
+      function et(t, e) {
         if (t.state && 'function' != typeof t.state) {
           console.warn(
             "'state' should be a method that returns an object in ".concat(e)
@@ -2800,9 +2803,9 @@
       }
       n(113)
       for (
-        var et = n(190),
-          nt = n.n(et),
-          ot = {
+        var nt = n(190),
+          ot = n.n(nt),
+          at = {
             setHeader: function(t, e) {
               var n =
                   arguments.length > 2 && void 0 !== arguments[2]
@@ -2863,16 +2866,16 @@
               this.onRequestError(t), this.onResponseError(t)
             }
           },
-          at = function() {
-            var t = st[it]
-            ot['$' + t] = function() {
+          it = function() {
+            var t = ut[st]
+            at['$' + t] = function() {
               return this[t].apply(this, arguments).then(function(t) {
                 return t && t.data
               })
             }
           },
-          it = 0,
-          st = [
+          st = 0,
+          ut = [
             'request',
             'delete',
             'get',
@@ -2882,11 +2885,11 @@
             'put',
             'patch'
           ];
-        it < st.length;
-        it++
+        st < ut.length;
+        st++
       )
-        at()
-      var ut = function(t, e) {
+        it()
+      var ct = function(t, e) {
           var n = {
             baseURL: '/',
             headers: {
@@ -2906,9 +2909,9 @@
             delete n.headers.common['cf-ray'],
             delete n.headers.common['cf-connecting-ip'],
             delete n.headers.common['content-length']
-          var r = nt.a.create(n)
+          var r = ot.a.create(n)
           !(function(t) {
-            for (var e in ot) t[e] = ot[e].bind(t)
+            for (var e in at) t[e] = at[e].bind(t)
           })(r),
             (function(t, e) {
               var n = {
@@ -2948,7 +2951,7 @@
             (t.$axios = r),
             e('axios', r)
         },
-        ct =
+        lt =
           (n(288),
           n(291),
           function(t) {
@@ -2991,69 +2994,69 @@
                 )
               })
           }),
-        lt = (n(292), n(191)),
-        ft = n.n(lt),
-        pt = (n(294), n(71)),
-        ht = n.n(pt),
-        mt = (n(300), n(141)),
-        vt = n.n(mt),
-        gt = (n(301), n(101)),
-        bt = n.n(gt),
-        xt = (n(304), n(192)),
-        yt = n.n(xt),
-        wt = (n(305), n(193)),
-        _t = n.n(wt),
-        Ot = (n(307), n(102)),
-        Ct = n.n(Ot),
-        jt = (n(308), n(194)),
-        $t = n.n(jt),
-        kt = (n(309), n(195)),
-        Et = n.n(kt),
-        Rt = (n(310), n(196)),
-        Pt = n.n(Rt),
-        St = (n(311), n(197)),
-        Tt = n.n(St),
-        Nt = (n(312), n(198)),
-        Dt = n.n(Nt),
-        At = (n(313), n(199)),
-        Lt = n.n(At),
-        It = (n(315), n(200)),
-        qt = n.n(It),
-        Bt = (n(316), n(201)),
-        Mt = n.n(Bt),
-        Ut = (n(317), n(202)),
-        zt = n.n(Ut),
-        Ft = (n(318), n(203)),
-        Ht = n.n(Ft),
-        Jt = (n(319), n(47)),
-        Kt = n.n(Jt),
-        Qt = (n(320), n(204)),
-        Xt = n.n(Qt),
-        Vt = (n(353), n(69)),
-        Wt = n.n(Vt),
-        Gt = (n(354), n(205)),
-        Yt = n.n(Gt),
-        Zt = (n(355), n(206)),
-        te = n.n(Zt),
-        ee = (n(357), n(207)),
-        ne = n.n(ee),
-        re = (n(358), n(208)),
-        oe = n.n(re),
-        ae = (n(359), n(209)),
-        ie = n.n(ae),
-        se = (n(366), n(210)),
-        ue = n.n(se),
-        ce = (n(369), n(211)),
-        le = n.n(ce),
-        fe = (n(371), n(138)),
-        pe = n.n(fe),
-        de = (n(372), n(137)),
-        he = n.n(de),
-        me = (n(373), n(65)),
-        ve = n.n(me),
-        ge = n(212),
-        be = n(213)
-      function xe(object, t) {
+        ft = (n(292), n(191)),
+        pt = n.n(ft),
+        ht = (n(294), n(71)),
+        mt = n.n(ht),
+        vt = (n(300), n(141)),
+        gt = n.n(vt),
+        bt = (n(301), n(101)),
+        xt = n.n(bt),
+        yt = (n(304), n(192)),
+        wt = n.n(yt),
+        _t = (n(305), n(193)),
+        Ot = n.n(_t),
+        Ct = (n(307), n(102)),
+        jt = n.n(Ct),
+        $t = (n(308), n(194)),
+        kt = n.n($t),
+        Et = (n(309), n(195)),
+        Rt = n.n(Et),
+        Pt = (n(310), n(196)),
+        St = n.n(Pt),
+        Tt = (n(311), n(197)),
+        Nt = n.n(Tt),
+        Dt = (n(312), n(198)),
+        At = n.n(Dt),
+        Lt = (n(313), n(199)),
+        It = n.n(Lt),
+        qt = (n(315), n(200)),
+        Bt = n.n(qt),
+        Mt = (n(316), n(201)),
+        Ut = n.n(Mt),
+        zt = (n(317), n(202)),
+        Ft = n.n(zt),
+        Ht = (n(318), n(203)),
+        Jt = n.n(Ht),
+        Kt = (n(319), n(47)),
+        Qt = n.n(Kt),
+        Xt = (n(320), n(204)),
+        Vt = n.n(Xt),
+        Wt = (n(353), n(69)),
+        Gt = n.n(Wt),
+        Yt = (n(354), n(205)),
+        Zt = n.n(Yt),
+        te = (n(355), n(206)),
+        ee = n.n(te),
+        ne = (n(357), n(207)),
+        re = n.n(ne),
+        oe = (n(358), n(208)),
+        ae = n.n(oe),
+        ie = (n(359), n(209)),
+        se = n.n(ie),
+        ue = (n(366), n(210)),
+        ce = n.n(ue),
+        le = (n(369), n(211)),
+        fe = n.n(le),
+        pe = (n(371), n(138)),
+        de = n.n(pe),
+        he = (n(372), n(137)),
+        me = n.n(he),
+        ve = (n(373), n(65)),
+        ge = n.n(ve),
+        be = n(212),
+        xe = n(213)
+      function ye(object, t) {
         var e = Object.keys(object)
         if (Object.getOwnPropertySymbols) {
           var n = Object.getOwnPropertySymbols(object)
@@ -3065,11 +3068,11 @@
         }
         return e
       }
-      function ye(t) {
+      function we(t) {
         for (var i = 1; i < arguments.length; i++) {
           var source = null != arguments[i] ? arguments[i] : {}
           i % 2
-            ? xe(source, !0).forEach(function(e) {
+            ? ye(source, !0).forEach(function(e) {
                 Object(r.a)(t, e, source[e])
               })
             : Object.getOwnPropertyDescriptors
@@ -3077,7 +3080,7 @@
                 t,
                 Object.getOwnPropertyDescriptors(source)
               )
-            : xe(source).forEach(function(e) {
+            : ye(source).forEach(function(e) {
                 Object.defineProperty(
                   t,
                   e,
@@ -3088,60 +3091,60 @@
         return t
       }
       ;(c.default.prototype.$ELEMENT = {size: 'medium'}),
-        c.default.use(ve.a),
-        c.default.use(he.a),
-        c.default.use(pe.a),
-        c.default.use(le.a),
-        c.default.use(ue.a),
-        c.default.use(ie.a),
-        c.default.use(oe.a),
-        c.default.use(ne.a),
-        c.default.use(te.a),
-        c.default.use(Yt.a),
-        c.default.use(Wt.a),
-        c.default.use(Xt.a),
-        c.default.use(Kt.a),
-        c.default.use(Ht.a),
-        c.default.use(zt.a),
-        c.default.use(Mt.a),
-        c.default.use(qt.a),
-        c.default.use(Lt.a),
-        c.default.use(Dt.a),
-        c.default.use(Tt.a),
-        c.default.use(Pt.a),
-        c.default.use(Et.a),
-        c.default.use($t.a),
-        c.default.use(Ct.a),
-        c.default.use(_t.a.directive),
-        c.default.use(yt.a),
-        c.default.use(bt.a),
-        c.default.component('el-form-renderer', ge.a),
-        c.default.component('el-data-table', be.a),
-        (c.default.prototype.$notify = vt.a),
-        (c.default.$notify = vt.a),
-        (c.default.prototype.$msgbox = ht.a),
-        (c.default.prototype.$alert = ht.a.alert),
-        (c.default.prototype.$confirm = ht.a.confirm),
-        (c.default.prototype.$prompt = ht.a.prompt),
-        (c.default.prototype.$message = ft.a),
-        c.default.component('icon-font', J),
+        c.default.use(ge.a),
+        c.default.use(me.a),
+        c.default.use(de.a),
+        c.default.use(fe.a),
+        c.default.use(ce.a),
+        c.default.use(se.a),
+        c.default.use(ae.a),
+        c.default.use(re.a),
+        c.default.use(ee.a),
+        c.default.use(Zt.a),
+        c.default.use(Gt.a),
+        c.default.use(Vt.a),
+        c.default.use(Qt.a),
+        c.default.use(Jt.a),
+        c.default.use(Ft.a),
+        c.default.use(Ut.a),
+        c.default.use(Bt.a),
+        c.default.use(It.a),
+        c.default.use(At.a),
+        c.default.use(Nt.a),
+        c.default.use(St.a),
+        c.default.use(Rt.a),
+        c.default.use(kt.a),
+        c.default.use(jt.a),
+        c.default.use(Ot.a.directive),
+        c.default.use(wt.a),
+        c.default.use(xt.a),
+        c.default.component('el-form-renderer', be.a),
+        c.default.component('el-data-table', xe.a),
+        (c.default.prototype.$notify = gt.a),
+        (c.default.$notify = gt.a),
+        (c.default.prototype.$msgbox = mt.a),
+        (c.default.prototype.$alert = mt.a.alert),
+        (c.default.prototype.$confirm = mt.a.confirm),
+        (c.default.prototype.$prompt = mt.a.prompt),
+        (c.default.prototype.$message = pt.a),
+        c.default.component('icon-font', K),
         n.d(e, 'b', function() {
-          return _e
+          return Oe
         }),
         n.d(e, 'a', function() {
-          return P
+          return S
         }),
-        c.default.component(C.name, C),
         c.default.component(j.name, j),
-        c.default.component('NChild', j),
-        c.default.component(T.name, T),
+        c.default.component($.name, $),
+        c.default.component('NChild', $),
+        c.default.component(N.name, N),
         c.default.use(f.a, {
           keyName: 'head',
           attribute: 'data-n-head',
           ssrAttribute: 'data-n-head-ssr',
           tagIDKeyName: 'hid'
         })
-      var we = {
+      var _e = {
         name: 'page',
         mode: 'out-in',
         appear: !0,
@@ -3149,13 +3152,13 @@
         appearActiveClass: 'appear-active',
         appearToClass: 'appear-to'
       }
-      function _e(t) {
-        return Oe.apply(this, arguments)
+      function Oe(t) {
+        return Ce.apply(this, arguments)
       }
-      function Oe() {
-        return (Oe = Object(o.a)(
+      function Ce() {
+        return (Ce = Object(o.a)(
           regeneratorRuntime.mark(function t(e) {
-            var n, r, o, l, f, path, _
+            var n, r, o, l, f, path, O
             return regeneratorRuntime.wrap(function(t) {
               for (;;)
                 switch ((t.prev = t.next)) {
@@ -3167,7 +3170,7 @@
                         base: decodeURI('/'),
                         linkActiveClass: 'nuxt-link-active',
                         linkExactActiveClass: 'nuxt-link-exact-active',
-                        scrollBehavior: w,
+                        scrollBehavior: _,
                         routes: [
                           {
                             path: '/el-data-table',
@@ -3175,8 +3178,13 @@
                             name: 'el-data-table'
                           },
                           {path: '/login', component: v, name: 'login'},
-                          {path: '/test', component: x, name: 'test'},
-                          {path: '/', component: y, name: 'index'}
+                          {
+                            path: '/slot-default-demo',
+                            component: x,
+                            name: 'slot-default-demo'
+                          },
+                          {path: '/test', component: y, name: 'test'},
+                          {path: '/', component: w, name: 'index'}
                         ],
                         fallback: !1
                       })
@@ -3184,23 +3192,23 @@
                   case 2:
                     return (
                       (n = t.sent),
-                      ((r = Z(e)).$router = n),
-                      (o = ye(
+                      ((r = tt(e)).$router = n),
+                      (o = we(
                         {
                           router: n,
                           store: r,
                           nuxt: {
-                            defaultTransition: we,
-                            transitions: [we],
+                            defaultTransition: _e,
+                            transitions: [_e],
                             setTransitions: function(t) {
                               return (
                                 Array.isArray(t) || (t = [t]),
                                 (t = t.map(function(t) {
                                   return (t = t
                                     ? 'string' == typeof t
-                                      ? Object.assign({}, we, {name: t})
-                                      : Object.assign({}, we, t)
-                                    : we)
+                                      ? Object.assign({}, _e, {name: t})
+                                      : Object.assign({}, _e, t)
+                                    : _e)
                                 })),
                                 (this.$options.nuxt.transitions = t),
                                 t
@@ -3222,7 +3230,7 @@
                             }
                           }
                         },
-                        G
+                        Y
                       )),
                       (r.app = o),
                       (l = e
@@ -3249,7 +3257,7 @@
                     )
                   case 11:
                     if (
-                      ((_ = function(t, e) {
+                      ((O = function(t, e) {
                         if (!t)
                           throw new Error(
                             'inject(key, value) has no key provided'
@@ -3274,18 +3282,18 @@
                       window.__NUXT__ &&
                         window.__NUXT__.state &&
                         r.replaceState(window.__NUXT__.state),
-                      'function' != typeof ut)
+                      'function' != typeof ct)
                     ) {
                       t.next = 16
                       break
                     }
-                    return (t.next = 16), ut(o.context, _)
+                    return (t.next = 16), ct(o.context, O)
                   case 16:
-                    if ('function' != typeof ct) {
+                    if ('function' != typeof lt) {
                       t.next = 19
                       break
                     }
-                    return (t.next = 19), ct(o.context, _)
+                    return (t.next = 19), lt(o.context, O)
                   case 19:
                     t.next = 22
                     break
@@ -3358,5 +3366,5 @@
     98: function(t, e, n) {},
     99: function(t, e, n) {}
   },
-  [[216, 6, 1, 7]]
+  [[216, 7, 1, 8]]
 ])
